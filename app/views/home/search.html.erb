@@ -1,0 +1,6 @@
+<h1>Search Results</h1>
+<div class="row">
+  <% @pins.each do |pin| %>
+    <%= render "pins/pin", pin:pin %>
+  <%end%>
+</div>

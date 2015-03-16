@@ -1,0 +1,8 @@
+<div class="col-md-4">
+  <% if pin.url.present? %>
+    <%= link_to image_tag(pin.url, class: 'img-responsive'), pin_path(pin) %>
+  <% else %>
+    <%= link_to image_tag(pin.image.url, class: 'img-responsive'), pin_path(pin) %>
+  <% end %>
+  <%= link_to pin.title, pin_path(pin)%>
+</div>

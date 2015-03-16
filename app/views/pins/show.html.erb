@@ -1,0 +1,13 @@
+<%= render "pins/pin", pin:@pin %>
+<p>
+  <strong>Description:</strong>
+  <%= @pin.description %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @pin.board.name %>
+</p>
+
+<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<%= link_to 'Back', pins_path %>
