@@ -47,7 +47,7 @@ end
 
 gem 'devise'
 gem 'kaminari'
-
+gem 'activeadmin', github: 'activeadmin'
 # Use postgres and the Heroku rails gem for Heroku
 group :production do
   gem 'pg'

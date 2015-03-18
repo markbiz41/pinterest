@@ -1,10 +1,11 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :authorize_pin, except: [:index, :new, :create]
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all
+    @pins = Pin.for_user(current_user)
   end
 
   # GET /pins/1
@@ -70,5 +71,11 @@ class PinsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
       params.require(:pin).permit(:title, :description, :board_id, :url, :image, :user_id)
+    end
+
+    def authorize_pin
+      if @pin.user != current_user
+        redirect_to root_path, notice: 'Not Authorized!'
+      end
     end
 end
