@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @pins = Pin.page params[:page]
+    logger.fatal @pins[0].inspect
   end
 
   def my_pins
