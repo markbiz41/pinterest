@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
   def my_pins
     @pins = current_user.pins.page params[:page]
+    #binding.pry
   end
 
   def my_boards
