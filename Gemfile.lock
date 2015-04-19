@@ -239,6 +239,7 @@ DEPENDENCIES
   better_errors
   bootstrap-sass
   bootswatch-rails
+  bourbon
   byebug
   carrierwave
   devise
