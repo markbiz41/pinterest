@@ -13,6 +13,7 @@ ActiveAdmin.register Pin do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+  permit_params :title, :description, :board_id, :url, :image, :user_id
   scope :with_external_url
 
   scope :today
