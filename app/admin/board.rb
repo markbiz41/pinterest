@@ -14,5 +14,5 @@ ActiveAdmin.register Board do
   #   permitted
   # end
 
-  scope :with_pins, -> { includes(:pins) }
+  scope :with_pins
 end

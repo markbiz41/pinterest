@@ -13,7 +13,7 @@ ActiveAdmin.register Pin do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-  scope :with_external_url, -> { where.not(url: '')}
+  scope :with_external_url
 
-  scope :today, -> {where("created_at >= ?", 1.day.ago)}
+  scope :today
 end
