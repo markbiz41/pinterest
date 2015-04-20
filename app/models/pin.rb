@@ -7,5 +7,5 @@ class Pin < ActiveRecord::Base
   scope :today, -> {where("created_at >= ?", 1.day.ago)}
   scope :for_user, lambda{ |user| where(:user_id => user.id) }
 
-
+  validates_presence_of :title, :description
 end

@@ -3,4 +3,6 @@ class Board < ActiveRecord::Base
   has_many :pins
 
   scope :with_pins, -> { includes(:pins) }
+
+  validates_presence_of :name
 end

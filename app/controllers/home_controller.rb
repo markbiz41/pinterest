@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @pins = Pin.page params[:page]
-    logger.fatal @pins[0].inspect
+    @pins = Pin.order('created_at DESC').page params[:page]
+    #logger.fatal @pins[0].inspect
   end
 
   def my_pins
@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   end
 
   def search
-    @pins = Pin.where("description LIKE ?", "%#{params[:query]}%")
+    @pins = Pin.where("title LIKE ? OR description LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
   end
 
 end

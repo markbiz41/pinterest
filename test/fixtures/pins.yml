@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  board_id: 
+  title: Awesome Pin
+  description: random desc
+  board: one
   url: MyString
   image: MyString
-  user_id: 
+  user: one
 
 two:
-  title: MyString
-  description: MyText
-  board_id: 
+  title: Great Pin
+  description: Desc 2
+  board: two
   url: MyString
   image: MyString
-  user_id: 
+  user: one
