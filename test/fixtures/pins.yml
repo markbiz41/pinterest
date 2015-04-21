@@ -15,3 +15,13 @@ two:
   url: MyString
   image: MyString
   user: one
+
+
+
+three:
+  title: Great Pin
+  description: Desc 2
+  board: two
+  url: MyString
+  image: MyString
+  user: admin

@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :boards
   has_many :pins
+
+  def name
+    self.email
+  end
 end
